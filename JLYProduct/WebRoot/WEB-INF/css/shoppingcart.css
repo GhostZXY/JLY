@@ -1,0 +1,207 @@
+.section {
+	width: 80%;
+	height: auto;
+	position: relative;
+	top: -100px;
+	left: 10%;
+}
+
+.sc_list {
+	width: 100%;
+	height: auto;
+	border-top: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+	position:relative;
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+
+.btn_selectAll {
+	margin-left: 30px;
+}
+
+.btn_selectAll {
+	color: #f10;
+	font-weight: bolder;
+}
+
+.btn_selectStore {
+	margin-top: 20px;
+	margin-left: 20px;
+	color: #fa0;
+	font-weight: bolder;
+}
+
+.sc_list ul {
+	border: 1px solid #aaa;
+	width: 95%;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+	top: 10px;
+}
+
+.sc_list ul li {
+	width: 100%;
+	height: 150px;
+	
+}
+
+.sc_list ul li:nth-child(even) {
+	background: #FEF3EA;
+}
+
+.sc_list ul li:nth-child(odd) {
+	background: #F0F0F0;
+}
+
+.sc_list ul li div {
+	height: 100%;
+	text-align: center;
+	line-height: 150px;
+	float: left;
+}
+
+.sc_list ul li .check {
+	width: 100px;
+}
+
+.sc_list ul li .pic {
+	width: 180px;
+}
+
+.sc_list ul li .pro_name {
+	width: 200px;
+}
+
+.sc_list ul li .pro_num {
+	width: 180px;
+}
+
+.sc_list ul li .pro_price {
+	width: 150px;
+}
+
+.sc_list ul li .btn_group {
+	width: 320px;
+}
+
+.li_pic {
+	width: 170px;
+	height: 140px;
+	margin:5px;
+}
+
+.li_btn_sub,
+.li_btn_add {
+	width: 30px;
+	height: 30px;
+	box-shadow: none;
+	float: left;
+	position: relative;
+	top: 60px;
+	left: 10px;
+	border: 1px solid #666;
+	border-radius: 0;
+	outline: none;
+	background: #fdfdfd;
+}
+
+.li_num {
+	height: 28px;
+	width: 80px;
+	float: left;
+	position: relative;
+	top: 60px;
+	border: 1px solid #666;
+	border-left: none;
+	border-right: none;
+	text-align: center;
+	left: 10px;
+	outline: none;
+}
+
+.li_btn_del {
+	width: 80px;
+	height: 40px;
+	background: red;
+	color: white;
+	font-size: 18px;
+	font-weight: bolder;
+	border-radius: 20px;
+	border: none;
+	outline: none;
+	box-shadow: #333 0px 0px 3px;
+	margin-right: 20px;
+}
+
+.li_btn_buy {
+	width: 80px;
+	height: 40px;
+	background: #85DA46;
+	color: white;
+	font-size: 18px;
+	font-weight: bolder;
+	border-radius: 20px;
+	border: none;
+	outline: none;
+	box-shadow: #333 0px 0px 3px;
+}
+
+.li_btn_del:active,
+.li_btn_buy:active {
+	box-shadow: inset #333 0px 0px 5px;
+}
+
+.total {
+	width: 80%;
+	height: 50px;
+	margin: 0 auto;
+	position: relative;
+	top: -50px;
+}
+
+.total .total_price {
+	width: 30%;
+	height: 100%;
+	position: absolute;
+	right: 20%;
+	line-height: 50px;
+	font-size: 18px;
+	font-weight: bolder;
+	letter-spacing: 10px;
+	color: red;
+	text-shadow: #aaa 1px 1px 2px;
+}
+
+.total label {
+	letter-spacing: 0;
+	font-size: 14px;
+}
+
+.total span {
+	color: red;
+	font-size: 24px;
+	letter-spacing: 0;
+}
+
+.total .btn_group {
+	width: 10%;
+	height: 100%;
+	position: absolute;
+	right: 10%;
+	line-height: 50px;
+}
+
+.total .btn_group button {
+	background: orangered;
+	color: white;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bolder;
+	width: 100px;
+	border: none;
+	border-radius: 15px;
+	height: 30px;
+	outline: none;
+}

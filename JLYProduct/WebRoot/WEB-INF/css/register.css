@@ -1,0 +1,157 @@
+
+
+section {
+	width: 80%;
+	position: relative;
+	left: 10%;
+	height: auto;
+}
+
+section .register_progress {
+	width: 100%;
+	height: 40px;
+}
+
+section .register_progress ul li {
+	float: left;
+	height: 30px;
+	padding: 0 88px;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	line-height: 30px;
+	padding-bottom: 10px;
+	color: #AAA;
+	border-bottom: 2px solid #DDD;
+}
+
+section .register_progress ul li span {
+	display: inline-block;
+	position: relative;
+	top: 5px;
+	float: left;
+	width: 20px;
+	height: 20px;
+	background: #DDD;
+	border-radius: 10px;
+	line-height: 20px;
+	text-align: center;
+	font-size: 12px;
+	margin-right: 5px;
+	color: #FFF;
+}
+
+section .register_progress ul .step.on {
+	border-bottom: 2px solid #F30;
+	color: #000;
+}
+
+section .register_progress ul .step.on span {
+	background: #F60;
+}
+
+section .register_progress ul .complete.on {
+	border-bottom: 2px solid #F30;
+	color: #000;
+}
+
+section .register_progress ul .complete.on span {
+	background: #BCD68D;
+}
+
+section .register_step {
+	margin-top: 30px;
+	width: 100%;
+	height: 480px;
+}
+
+section .register_step p {
+	width: 60%;
+	height: 60px;
+	position: relative;
+	left: 30%;
+	top: 50px;
+}
+
+section .register_step p span {
+	display: inline-block;
+	width: 18%;
+	height: 60px;
+	line-height: 60px;
+	padding-left: 20px;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: "黑体";
+}
+
+section .register_step p .tip {
+	display: inline;
+	font-size: 12px;
+	font-weight: 300;
+	color: #f00;
+}
+
+section .register_step p b {
+	display: none;
+	color: #BCD68D;
+}
+
+section .register_step p input {
+	width: 35%;
+	height: 24px;
+	padding-left: 5px;
+	outline: none;
+	font-size: 12px;
+	line-height: 24px;
+}
+
+section .register_step p:last-child {
+	margin-top: 50px;
+}
+
+#step2,
+#step3 {
+	display: none;
+}
+
+section .register_step .previous_step,
+section .register_step .next_step {
+	width: 200px;
+	height: 40px;
+	padding: 0;
+	background: linear-gradient(#9EEA6A, #89DE4C);
+	border: 1px solid #AAA;
+	color: #FFF;
+	position: relative;
+	font-weight: bold;
+	margin-right: 30px;
+	left: 30%;
+}
+section #step1 p a{
+	font-size: 12px;
+	text-decoration: underline;
+	position: relative;
+	left: 25%;
+}
+section #step3 img {
+	position: relative;
+	left: 350px;
+	top: 100px;
+	width: 100px;
+	height: auto;
+}
+
+section #step3 span {
+	position: relative;
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	left: 400px;
+	top: 60px;
+}
+
+section #step3 #jump_to_home {
+	position: relative;
+	top: 150px;
+	left: 500px;
+}

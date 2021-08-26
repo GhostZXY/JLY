@@ -1,0 +1,184 @@
+header {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 250px;
+	width: 100%;
+}
+
+#top_nav {
+	width: 100%;
+	height: 30px;
+	background: #EEE;
+	border-bottom: 1px solid #BBB;
+}
+
+#top_nav div {
+	float: left;
+	position: relative;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 10px;
+}
+
+#nav_log_reg {
+	margin-left: 60%;
+}
+
+#nav_log_reg span {
+	font-size: 12px;
+	color: #777;
+}
+
+#top_nav div a {
+	font-size: 12px;
+	margin-right: 5px;
+	color: #777;
+}
+
+#top_nav div a:hover {
+	color: #F30;
+}
+
+#to_shopping_cart {
+	color: #F90 !important;
+}
+
+#to_order {
+	text-align: center;
+	cursor: pointer;
+	font-size: 12px;
+	margin-right: 5px;
+	color: #777;
+	float: left;
+	display: inline-block;
+	width: 70px;
+	padding: 0 !important;
+	border-left: 1px solid #EEE;
+	border-right: 1px solid #EEE;
+}
+
+#to_order:hover {
+	background: #FFF;
+	border-left: 1px solid #BBB;
+	border-right: 1px solid #BBB;
+}
+
+#to_order span {
+	line-height: 33px;
+	font-size: 12px;
+}
+
+#nav_my_order {
+	display: none;
+	position: absolute;
+	height: auto;
+	width: 70px;
+	left: -1px;
+	top: 30px;
+	background: #FFF;
+	z-index: 2;
+}
+
+#nav_my_order li {
+	text-align: center;
+	position: relative;
+	top: 0;
+	background: #FFF;
+	width: 70px;
+	border-left: 1px solid #BBB;
+	border-right: 1px solid #BBB;
+}
+
+#nav_my_order li:nth-of-type(2) {
+	border-bottom: 1px solid #BBB;
+}
+
+#nav_my_order li:hover a {
+	color: red;
+}
+
+#logo {
+	position: absolute;
+	float: left;
+	left: 5%;
+	top: 60px;
+	width: 20%;
+	height: auto;
+	overflow: hidden;
+}
+
+#logo a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#logo img {
+	width: 120%;
+	position: relative;
+	left: -10%;
+	height: auto;
+}
+
+.search_block {
+	position: absolute;
+	left: 30%;
+	float: left;
+	width: 60%;
+	height: 230px;
+}
+
+.search {
+	width: 60%;
+	height: 40px;
+	position: relative;
+	top: 100px;
+	border: 2px solid #F90;
+	border-radius: 20px;
+	line-height: 40px;
+	padding-left: 10px;
+	overflow: hidden;
+}
+
+.search span {
+	display: inline-block;
+	width: 3%;
+	color: #666;
+}
+
+.search input {
+	border: none;
+	background: #FFF;
+	height: 40px;
+	outline: none;
+}
+
+.search #search_keywords {
+	width: 77%;
+	top: 1px;
+}
+
+.search #search_btn {
+	position: absolute;
+	right: -3px;
+	width: 20%;
+	background: #F90;
+	color: #FFF;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.promotion {
+	width: 60%;
+	height: 20px;
+	position: relative;
+	top: 100px;
+	left: 20px;
+}
+
+.promotion a {
+	font-size: 12px;
+	color: #999;
+	height: 20px;
+}

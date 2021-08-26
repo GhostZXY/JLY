@@ -1,0 +1,350 @@
+article {
+	padding-top: 50px;
+	position: relative;
+	width: 15%;
+	height: 500px;
+	left: 10%;
+	float: left;
+}
+
+article h3 {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 18px;
+	color: #F62;
+}
+
+article ul {
+	width: 100%;
+	height: auto;
+}
+
+article ul li {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+}
+
+article ul li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 14px;
+	color: #888;
+}
+
+article ul li:hover a {
+	color: #F62;
+}
+
+article ul .on a {
+	color: #666;
+	font-weight: bold;
+}
+
+article ul .on:hover a {
+	color: #666;
+}
+
+section {
+	position: relative;
+	width: 60%;
+	height: 500px;
+	float: left;
+	top: 50px;
+	left: 10%;
+}
+
+section .edit_block {
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: relative;
+	width: 90%;
+	height: 90%;
+	left: 0;
+	top: 15px;
+	background: rgba(220, 220, 220, 0.2);
+}
+
+section .edit_block h4 {
+	position: relative;
+	top: 20px;
+	left: 30px;
+	font-size: 24px;
+	color: orangered;
+}
+
+section .edit_block form {
+	width: 70%;
+	height: 60%;
+	margin: 0 auto;
+	position: relative;
+	top: 10%;
+}
+
+section .edit_block form p {
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+}
+
+section .edit_block form p span {
+	display: inline-block;
+	width: 150px;
+}
+
+section .edit_block form p input {
+	width: 240px;
+}
+
+.my_info {
+	display: block;
+}
+
+.account_safe,
+.address_manage {
+	display: none;
+}
+
+.account_safe form p #confirm_password {
+	width: 200px;
+	height: 45px;
+	position: absolute;
+	bottom: 10px;
+	right: 10%;
+	background: linear-gradient(#F27860, #D74E3E);
+	border: none;
+	color: white;
+	font-weight: bold;
+	box-shadow: #aaa 2px 2px 3px;
+}
+
+.account_safe form p .tip {
+	display: inline-block;
+	width: 100px;
+	line-height: 60px;
+	color: red;
+	padding-left: 30px;
+}
+
+#man,
+#woman {
+	width: 15px;
+}
+
+#woman {
+	margin-left: 10px;
+}
+
+.my_info .head_edit {
+	padding-top: 20px;
+	width: 600px;
+	height: 150px;
+}
+
+
+.my_info .head_edit .my_head_bg {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	left: 150px;
+	top: -20px;
+	padding: 10px;
+	background: url(../img/bg.png);
+}
+
+.my_info .head_edit .my_head {
+	width: 100px;
+	height: 100px;
+	border: 5px dashed #ccc;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: #FFF;
+	position:relative;
+	overflow:hidden;
+}
+.my_info .head_edit .my_head #head{
+	width:100%;
+	opacity: 0;
+	position: absolute;
+	z-index: 1;
+	
+}
+#head_pic{
+	width:100%;
+	height:100%;
+	position: absolute;
+	z-index: 2;
+	top:0;
+}
+
+#submit_btn{
+	width:200px;
+	height:40px;
+	background:orangered;
+	position:relative;
+	left:400px;
+	top:-50px;
+	border:none;
+	color:#fff;
+	
+	outline:none;
+}
+
+.address_manage .address_client {
+	width: 98%;
+	height: 350px;
+	position: relative;
+	margin: 0 auto;
+	top: 30px;
+	text-align: center;
+}
+
+.address_table {
+	width: 100%;
+	height: auto;
+}
+
+.address_table tr {
+	height: 50px;
+	color: #555;
+}
+
+.address_table tr:nth-child(odd) {
+	background: rgba(216, 76, 41, 0.1);
+}
+
+.address_table tr:nth-child(even) {
+	background: rgba(240, 240, 240, 0.5);
+}
+
+.address_table th {
+	background: rgba(216, 76, 41, 1);
+	color: #FFF;
+}
+
+.address_table th:nth-of-type(1) {
+	width: 10%;
+}
+
+.address_table th:nth-of-type(2) {
+	width: 35%;
+}
+
+.address_table th:nth-of-type(3) {
+	width: 12%;
+}
+
+.address_table th:nth-of-type(4) {
+	width: 30%;
+}
+
+.address_table th:nth-of-type(5) {
+	width: 13%;
+}
+
+.address_table td {
+	font-size: 12px;
+}
+
+.edit {
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.edit:hover {
+	color: blue;
+}
+
+.default_btn {
+	outline: none;
+	padding: 0 5px;
+	font-weight: bold;
+	border-radius: 10px;
+	font-size: 12px;
+	background: orangered;
+	color: #FFF;
+	border-color: orangered;
+	border-width: 1px;
+	cursor: pointer;
+}
+
+.default {
+	background: #ddd;
+	color: #333;
+	font-weight: lighter;
+	border: 1px #ddd solid;
+}
+
+.operation_btn {
+	position: absolute;
+	bottom: 5px;
+	right: 30px;
+}
+
+.operation_btn button {
+	margin-left: 30px;
+}
+
+.operation_btn .add_address {
+	outline: none;
+	background: linear-gradient(#FF4500, #D84C29);
+	padding: 3px 8px;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+}
+
+.operation_btn .del_address {
+	outline: none;
+	background: linear-gradient(#FF0000, #E22018);
+	padding: 3px 8px;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+}
+
+
+
+.mask .address_add_client {
+	display: none;
+	width: 50%;
+	height: 42%;
+	position: fixed;
+	left: 25%;
+	top: 29%;
+	background: #fff;
+	box-shadow: #999 3px 3px 5px;
+}
+
+.mask .address_add_client p {
+	width: 60%;
+	height: 50px;
+	margin: 10px auto;
+}
+
+.mask .address_add_client p span {
+	display: inline-block;
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+}
+
+.mask .address_add_client p #isDefault_false {
+	margin-left: 30px;
+}
+
+#add_address_btn {
+	width: 20%;
+	height: 30px;
+	position: absolute;
+	right: 50px;
+	bottom: 15px;
+	background: linear-gradient(#FF0000, #E22018);
+	color: #fff;
+	border: none;
+	font-weight: bold;
+	border-radius: 5px;
+}

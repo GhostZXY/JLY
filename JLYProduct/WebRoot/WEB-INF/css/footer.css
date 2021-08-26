@@ -1,0 +1,51 @@
+footer {
+	position: relative;
+	width: 100%;
+	height: 90px;
+	background: #FFF;
+}
+
+footer .friend_link {
+	position: relative;
+	width: 80%;
+	height: 30px;
+	left: 10%;
+	top: 10px;
+	line-height: 30px;
+	border-bottom: 1px solid #DDD;
+}
+
+footer .about_happlyShop {
+	position: relative;
+	width: 80%;
+	height: 30px;
+	left: 10%;
+	top: 10px;
+	line-height: 30px;
+}
+
+footer .friend_link a {
+	border-right: 1px solid #DDD;
+}
+
+footer .friend_link a:last-child {
+	border: none;
+}
+
+footer a {
+	font-size: 12px;
+	padding: 0 10px;
+	color: #999;
+}
+
+footer p {
+	text-align: center;
+	position: relative;
+	width: 80%;
+	height: 20px;
+	left: 10%;
+	top: 10px;
+	line-height: 20px;
+	color: #BBB;
+	font-size: 12px;
+}
