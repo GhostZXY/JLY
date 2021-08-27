@@ -1,5 +1,4 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -10,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'home.jsp' starting page</title>
+    <title>My JSP 'buyerModify.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -24,8 +23,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    <c:forEach items="${userList }" var = "user">
-   	 <p>${user.u_username }</p>
-    </c:forEach>
+  <form  method="post" action="">
+  
+    <input type="text" id="u_username" name="u_username" value="${userInfo.u_username} "> <br>
+    <input type="password" id="u_password" name="u_password" value="${userInfo.u_password}"> <br>
+    <input type="text" id="u_nickname" name="u_nickname" value="${userInfo.u_nickname}"> <br>
+    <input type="submit" value="修改"> <br>
+  
+  </form>
   </body>
 </html>

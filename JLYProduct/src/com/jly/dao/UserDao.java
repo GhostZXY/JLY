@@ -9,4 +9,6 @@ import com.jly.bean.User;
 public interface UserDao {
 	public List<User> querryAllUser();
 	public User querryUserById(@Param("id") int id);
+	public int addUser(User user);
+	public User queryUserByUsername(@Param("u_username") String username);
 }

@@ -30,4 +30,29 @@ public class UserServiceImp implements UserService {
 		// TODO Auto-generated method stub
 		return userDao.querryUserById(p_id);
 	}
+
+	@Override
+	public boolean addUser(User user) {
+		// TODO Auto-generated method stub
+		if(userDao.queryUserByUsername(user.getU_username())==null){
+			return userDao.addUser(user)!=0;
+		}
+		return false;
+	}
+
+	@Override
+	public boolean login(User user) {
+		// TODO Auto-generated method stub
+		User u = userDao.queryUserByUsername(user.getU_username());
+		if(u!=null && u.getU_password().equals(user.getU_password())){
+				return true;
+		}
+		return false;
+	}
+
+	@Override
+	public Object findUserByUsername(String loginName) {
+		// TODO Auto-generated method stub
+		return userDao.queryUserByUsername(loginName);
+	}
 }

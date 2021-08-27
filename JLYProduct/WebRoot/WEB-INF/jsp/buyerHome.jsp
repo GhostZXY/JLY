@@ -4,6 +4,13 @@
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+Cookie[] cookies = request.getCookies();
+String loginName = null;
+for(Cookie cookie:cookies){
+	if(cookie.getName().equals("LOGINNAME")){
+		loginName = cookie.getValue();
+	}
+}
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -33,8 +40,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <header>
 			<div id="top_nav">
 				<div id="nav_log_reg">
-					<a href="login.html" id="to_login">您好，请登录</a>
-					<a href="register.html" id="to_register">免费注册</a>
+				<% if (loginName.equals("")){ %>>
+					<a href="product/toLogin.action" id="to_login">您好，请登录</a>
+					<a href="product/toRegister.action" id="to_register">免费注册</a>
+					<%}else{ %>
+						<p >您好，<a href="product/toModify.action?loginName=<%= loginName %> "><%= loginName %></a></p>
+					<%} %>
 				</div>
 				<div class="nav_shopping_cart">
 					<a href="shoppingcart.html" id="to_shopping_cart">

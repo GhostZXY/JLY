@@ -7,4 +7,11 @@
 	<select id="querryUserById" parameterType="Integer">
 		select * from user where u_id = ${id}
 	</select>
+	<select id="queryUserByUsername" parameterType="String" resultType="user">
+		select * from user where u_username = ${u_username}
+	</select>
+	<insert id="addUser" parameterType="user">
+		insert into user(u_username,u_password,u_type,u_hasstore) 
+		values (#{u_username},#{u_password},'1','0')
+	</insert>
 </mapper>
