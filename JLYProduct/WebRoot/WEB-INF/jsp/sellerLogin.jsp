@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -20,8 +20,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-		<script src="js/jquery.cookie.js" type="text/javascript"></script>
 	<script src="js/jquery-3.0.0.js" type="text/javascript"></script>
+	<script src="js/jquery.cookie.js" type="text/javascript"></script>
 	<script type="text/javascript" >
 		$(function(){
 			$("#login_btn").click(function(){
@@ -35,12 +35,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					},
 					success:function(result){
 						if(result =="success"){
+						
 							var hasstore = $.cookie("HASSTORE")
-							if(hasstore == true){
+							if(hasstore == "true"){
 								window.location.href="seller/home.action"
 							}else{
-								window.location.href="seller/toAddStore.action"							
+								window.location.href="seller/addStore.action"							
 							}
+							
 						}else{
 							$(".tip").html("登录失败")
 						}
@@ -55,7 +57,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
   	<form method="post"action="">
   		<input type="text" name="u_username" id="u_username"><br/>
-   		<input type="text" name="u_password" id="u_password"><br/>
+   		<input type="password" name="u_password" id="u_password"><br/>
    		<input type="button" id="login_btn" value="登录"><br/>
    		<span class="tip"></span>
    		

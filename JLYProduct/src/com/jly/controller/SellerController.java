@@ -1,25 +1,24 @@
 package com.jly.controller;
 
-import java.util.List;
 
 import javax.annotation.Resource;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.jly.bean.Product;
-import com.jly.bean.Stores;
+
 import com.jly.bean.User;
-import com.jly.service.UserService;
+	import com.jly.service.UserService;
 @Controller
 @RequestMapping("/seller")
 public class SellerController {
+	
 	@Resource(name="UserService")
 	UserService userService;
+	
 	public UserService getUserService() {
 		return userService;
 	}
@@ -51,7 +50,7 @@ public class SellerController {
 		
 		return "sellerHome";
 	}
-	@RequestMapping("/toAddStore")
+	@RequestMapping("/addStore")
 	public String AddStore(){
 		
 		return "addStore";
