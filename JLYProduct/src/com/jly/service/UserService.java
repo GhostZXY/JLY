@@ -1,6 +1,8 @@
 package com.jly.service;
 import java.util.List;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import com.jly.bean.User;
 
 public interface UserService {
@@ -9,5 +11,6 @@ public interface UserService {
 	public boolean addUser(User user);
 	public boolean login(User user);
 	public Object findUserByUsername(String loginName);
-	
+	public boolean modifyUserInfo(User user);
+	public boolean modifyUserInfoWitHead(User user,MultipartFile head);
 }

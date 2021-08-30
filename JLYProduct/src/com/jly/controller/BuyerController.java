@@ -9,7 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.jly.bean.Product;
 import com.jly.bean.User;
@@ -77,6 +79,29 @@ public class BuyerController {
 	public String toModify (Model model,String loginName){
 		model.addAttribute("userInfo", userService.findUserByUsername(loginName));
 		return "buyerModify";
+	}
+	/**
+	 * @param u_username
+	 * @param u_password
+	 * @param u_nickname
+	 * @param u_head
+	 * @return
+	 */
+	@RequestMapping("/modify")
+	public String modify (String u_username,String u_password,String u_nickname
+			,@RequestParam("u_head") MultipartFile u_head){
+		User user = new User();
+		user.setU_username(u_username);
+		user.setU_password(u_password);
+		user.setU_nickname(u_nickname);
+		
+		System.out.println(u_username+","+u_password+","+u_nickname);
+		if(u_head.getOriginalFilename().equals("")){
+			userService.modifyUserInfo(user);
+		}else{
+			userService.modifyUserInfoWitHead(user, u_head);
+		}
+		return "redirect:/product/buyerhome.action";
 	}
 	
 }
