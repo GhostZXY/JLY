@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jly.dao.StoresDao">
+	<select id="querryAllStores" resultType="stores" parameterType="integer" >
+		select * from stores where u_id = #{u_id}
+	</select>
+	
+	<insert id="addStore" parameterType="stores" >
+		insert into stores(s_name,u_id,s_address,s_tel) 
+		values (#{s_name},#{u_id},#{s_address},#{s_tel})
+	</insert>
+</mapper>

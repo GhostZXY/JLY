@@ -3,6 +3,14 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 
+
+	Cookie[] cookies = request.getCookies();			
+	String loginName = "";
+	for (Cookie cookie : cookies) {
+		if (cookie.getName().equals("LOGINNAME")) {
+			loginName = cookie.getValue();
+		}
+	}	
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -40,7 +48,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							if(hasstore == "true"){
 								window.location.href="seller/home.action"
 							}else{
-								window.location.href="seller/addStore.action"							
+								window.location.href="seller/toAddStore.action"							
 							}
 							
 						}else{

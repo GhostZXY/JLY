@@ -50,13 +50,11 @@
 		%>
 		<a href="product/toModify.action?loginName=<%=loginName%>"
 			id="to_login">您好，<%=loginName%></a>
-		<%
-			}
-		%>
+		
 
 	</div>
 	<div class="nav_shopping_cart">
-		<a href="shoppingcart.html" id="to_shopping_cart"> <span
+		<a href="product/toCart.action" id="to_shopping_cart"> <span
 			class="fa fa-shopping-cart"></span> 我的购物车
 		</a>
 	</div>
@@ -74,7 +72,9 @@
 	<div class="nav_seller">
 		<a href="seller/toLogin.action" id="to_seller_center">卖家中心</a>
 	</div>
-
+		<%
+			}
+		%>
 </div>
 <div id="logo">
 	<a href="home.html"> <img src="img/logo.jpg" />

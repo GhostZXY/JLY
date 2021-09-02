@@ -13,4 +13,5 @@ public interface UserDao {
 	public User queryUserByUsername(@Param("u_username") String u_username);
 	public int updataUser (User user);
 	public int updateUserWithPic(User user);
+	public int updateHasStore(@Param("id") int id);
 }

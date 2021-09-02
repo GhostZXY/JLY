@@ -38,4 +38,11 @@ public class ProductServiceImp implements ProductService {
 		return productDao.querryProductById(id);
 	}
 
+
+	@Override
+	public List<Product> querryProductList(int id) {
+		// TODO Auto-generated method stub
+		return productDao.querryProductBySid(id);
+	}
+
 }

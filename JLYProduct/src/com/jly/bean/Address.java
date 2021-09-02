@@ -5,8 +5,8 @@ public class Address {
 	private String a_address; //联系电话
 	private String a_tel;	  //电话
 	private String a_name;	  //地址名称
-	private User u;			  //用户id
-	private String a_isdefult;//详细地址
+	private String u_id;	 //用户id
+	private String a_isdefault;//详细地址
 	public int getA_id() {
 		return a_id;
 	}
@@ -31,17 +31,18 @@ public class Address {
 	public void setA_name(String a_name) {
 		this.a_name = a_name;
 	}
-	public User getU() {
-		return u;
+	
+	public String getU_id() {
+		return u_id;
 	}
-	public void setU(User u) {
-		this.u = u;
+	public void setU_id(String u_id) {
+		this.u_id = u_id;
 	}
-	public String getA_isdefult() {
-		return a_isdefult;
+	public String getA_isdefault() {
+		return a_isdefault;
 	}
-	public void setA_isdefult(String a_isdefult) {
-		this.a_isdefult = a_isdefult;
+	public void setA_isdefault(String a_isdefault) {
+		this.a_isdefault = a_isdefault;
 	}
 	
 	

@@ -2,6 +2,14 @@
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+
+Cookie[] cookies = request.getCookies();
+	String loginName = "";
+	for (Cookie cookie : cookies) {
+		if (cookie.getName().equals("LOGINNAME")) {
+			loginName = cookie.getValue();
+		}
+	}
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -31,8 +39,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <img alt="" src="${userInfo.u_head_old }"><br/>
     <input type="file" id="u_head" name="u_head" > <br>
     <input type="submit" value="修改"> <br>
-    
+    <a href="product/toAddressMenager.action?username=<%=loginName %>">管理地址 </a>
   
   </form>
+  
   </body>
 </html>

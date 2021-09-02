@@ -26,6 +26,40 @@
 
 <body>
 	
+	<h1>我的店铺</h1>
+	<table>
+		<tr>
+			<th>商品名</th>
+			<th>商品价格</th>
+			<th>商品产地</th>
+			<th>商品详情</th>
+			<th>商品库存</th>
+			<th>操作</th>
+		</tr>
+		
+		<c:forEach items="${productList}" var="product"> 
+			<tr>
+				<td>${product.p_name}</td>
+				<td>${product.p_price}</td>
+				<td>${product.p_local}</td>
+				<td>${product.p_info}</td>
+				<td>${product.p_inventory}</td>
+				<td>
+					
+						<c:if test='${product.p_status=="1"}'>
+							<button>下架</button> 
+						</c:if> 
+						<c:if test='${product.p_status=="0"}'>
+							<button>上架</button>
+						</c:if> 
+					
+				</td>
+			</tr>
+		</c:forEach>
+	</table>
 	
+	<a href="#">添加商品</a>
+		
+			
 </body>
 </html>

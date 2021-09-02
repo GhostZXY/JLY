@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jly.dao.AddressDao">
+	<select id="querryAllAddress" resultType="address" parameterType="integer">
+		select * from address where u_id=${id} order by a_isdefault desc
+	</select>
+	<select id="queryDefaultAddress" resultType="address" parameterType="integer">
+		select * from address where u_id=${id} and a_isdefault="1"
+	</select>
+	<update id="uppDateAddress">
+		update address set a_isdefault = ${a_isdefault} where a_id=${id}
+	</update>
+	<insert id="addAddress" parameterType="address" >
+		insert into address(a_address,a_tel,a_name,u_id,a_isdefault) values(#{a_address},#{a_tel},#{a_name},#{u_id},#{a_isdefault})
+	</insert>
+	<delete id="delAddress" parameterType="integer" >
+		delete address where a_id="#{id}"
+	</delete>
+	<select id="queryAddressById" resultType="address" parameterType="integer">
+		select * from address where a_id=${id}
+	</select>
+</mapper>

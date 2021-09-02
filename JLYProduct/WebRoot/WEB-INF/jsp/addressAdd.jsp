@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'addStore.jsp' starting page</title>
+    <title>My JSP 'toAddressAdd.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -23,11 +23,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-   <form action="seller/addStore.action" method="post">
-   		商铺名<input type="text" name="s_name" id="s_name">
-   		商铺地址<input type="text" name="s_address" id="s_address">
-   		商铺电话<input type="text" name="s_tel" id="s_tel">
-   		<input type="submit" value="开店">
-   </form>
+    <form method="post" action="product/addressAdd.action">
+    	地址<input type="text" id="a_address" name="a_address">
+    	电话<input type="text" id="a_tel" name="a_tel">
+    	收件人<input type="text" id="a_name" name="a_name">
+    	是否默认<input type="radio" id="a_default" name="a_default">是
+    	<input type="radio" id="a_default" name="a_default">否
+    	<input type="submit" value="保存地址">
+    </form> <br>
   </body>
 </html>

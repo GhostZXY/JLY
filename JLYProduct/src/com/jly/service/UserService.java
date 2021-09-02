@@ -10,7 +10,8 @@ public interface UserService {
 	public User findUserById(int id);
 	public boolean addUser(User user);
 	public boolean login(User user);
-	public Object findUserByUsername(String loginName);
+	public User findUserByUsername(String loginName);
 	public boolean modifyUserInfo(User user);
 	public boolean modifyUserInfoWitHead(User user,MultipartFile head);
+	public void updateHasStore(int id);
 }

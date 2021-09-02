@@ -12,12 +12,16 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.jly.bean.Address;
 import com.jly.bean.User;
+import com.jly.dao.AddressDao;
 import com.jly.dao.UserDao;
 @Service(value="UserService")
 public class UserServiceImp implements UserService {
 	@Resource
 	UserDao userDao;
+	@Resource
+	AddressDao addressDao;
 
 	public UserDao getUserDao() {
 		return userDao;
@@ -57,7 +61,7 @@ public class UserServiceImp implements UserService {
 	}
 
 	@Override
-	public Object findUserByUsername(String loginName) {
+	public User findUserByUsername(String loginName) {
 		// TODO Auto-generated method stub
 		return userDao.queryUserByUsername(loginName);
 	}
@@ -95,5 +99,14 @@ public class UserServiceImp implements UserService {
 			}
 		}
 		return false;
+	}
+
+	@Override
+	public void updateHasStore(int id) {
+		// TODO Auto-generated method stub
+		Address address_old = addressDao.queryDefaultAddress(id);
+		
+		addressDao.uppDateAddress(address_old.getA_id(),"0");
+		addressDao.uppDateAddress(id,"1");
 	}
 }

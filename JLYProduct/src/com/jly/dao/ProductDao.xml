@@ -2,11 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jly.dao.ProductDao">
 	<select id="querryAllProduct" resultType="product" >
-		select * from products where p_status = "上架"
+		select * from products where p_status = "1"
 	</select>
 	
 	<select id="querryProductById" parameterType="integer" resultType="product" >
 		select * from products where p_id = ${p_id}
+	</select>
+	<select id="querryProductBySid" parameterType="integer" resultType="product" >
+		select * from products where s_id = ${s_id}
 	</select>
 	
 </mapper>
